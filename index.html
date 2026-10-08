@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<!-- 
+  Developer Note: 
+  Design system specifications (colors, fonts, layout logic) are documented 
+  at the very top of style.css.
+-->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio d'Ayoub ANAM — Étudiant en Master Intelligence Artificielle, Data Science & Big Data. Recherche un stage PFE à partir de février 2027.">
+    <title>Ayoub ANAM - Portfolio</title>
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Ayoub ANAM</div>
+            <ul class="nav-links">
+                <li><a href="#home" data-i18n="nav_home">Accueil</a></li>
+                <li><a href="#about" data-i18n="nav_about">À propos</a></li>
+                <li><a href="#education" data-i18n="nav_education">Formations</a></li>
+                <li><a href="#skills" data-i18n="nav_skills">Compétences</a></li>
+                <li><a href="#experience" data-i18n="nav_experience">Expérience</a></li>
+                <li><a href="#projects" data-i18n="nav_projects">Projets</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+                <li><button id="lang-toggle" class="lang-btn">EN</button></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero fade-in">
+            <div class="hero-inner">
+                <div class="hero-content-left">
+                    <h1><span data-i18n="hero_hi">Bonjour, je suis</span><br><span class="name-highlight">Ayoub ANAM</span></h1>
+                    <p data-i18n="hero_desc"></p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary" data-i18n="btn_work">Voir mes projets</a>
+                        <button id="view-cv-btn" class="btn btn-outline" data-i18n="btn_cv">Voir mon CV</button>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/Anam-Ayoub/" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/ayoub-anam/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="hero-content-right">
+                    <h2 data-i18n="hero_role" class="hero-role-text typewriter-text"></h2>
+                </div>
+            </div>
+            <!-- Scroll Down Indicator -->
+            <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-padding fade-in">
+            <div class="container">
+                <h2 class="section-title" data-i18n="about_title">À propos de moi</h2>
+                <p class="about-text" data-i18n="about_p1">
+                    Étudiant en Master d’excellence Systèmes de l’Information et Intelligence Artificielle, avec une expertise pratique en Machine Learning, Deep Learning et Analyse de Données. Conception et déploiement de modèles de réseaux de neurones (CNN, LSTM, MLP) dans des projets concrets et mesurables.
+                </p>
+                <p class="about-text" data-i18n="about_p2">
+                    Double expérience de stage en développement logiciel full-stack au sein d’environnements professionnels exigeants (Clinique Avicenne, OCP). Je suis passionné par la technologie et recherche activement de nouvelles opportunités.
+                </p>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education section-padding fade-in">
+            <div class="container">
+                <h2 class="section-title" data-i18n="exp_edu">Formations</h2>
+                
+                <div class="education-grid">
+                    <div class="education-card">
+                        <div class="edu-degree">MASTER</div>
+                        <h4 data-i18n="edu_master">Systèmes de l’Information et Intelligence Artificielle</h4>
+                        <h5>FP Khouribga, USMS</h5>
+                        <div class="edu-date">2025 – 2027</div>
+                    </div>
+                    <div class="education-card">
+                        <div class="edu-degree">LICENCE</div>
+                        <h4 data-i18n="edu_licence">Systèmes de l’Information et Intelligence Artificielle</h4>
+                        <h5>FP Khouribga, USMS</h5>
+                        <div class="edu-date">2024 – 2025</div>
+                    </div>
+                    <div class="education-card">
+                        <div class="edu-degree">BTS</div>
+                        <h4 data-i18n="edu_bts">Développement des Systèmes d’Information</h4>
+                        <h5>Centre BTS, Settat</h5>
+                        <div class="edu-date">2022 – 2024</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section-padding fade-in">
+            <div class="container">
+                <h2 class="section-title" data-i18n="skills_title">Compétences Techniques</h2>
+                <div class="skills-table">
+
+                    <div class="skills-row">
+                        <div class="skills-row__label">
+                            <i class="fas fa-robot"></i>
+                            <h3 data-i18n="skill_ia">IA & ML</h3>
+                        </div>
+                        <div class="skills-row__tags">
+                            <span>Machine Learning</span><span>Deep Learning</span><span>CNN</span><span>LSTM</span><span>MLP</span><span>GAN</span><span>Diffusion Models</span><span>PyTorch</span><span>TensorFlow</span><span>Keras</span><span>Scikit-learn</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-row">
+                        <div class="skills-row__label">
+                            <i class="fas fa-chart-pie"></i>
+                            <h3 data-i18n="skill_ds">Data Science</h3>
+                        </div>
+                        <div class="skills-row__tags">
+                            <span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-row">
+                        <div class="skills-row__label">
+                            <i class="fas fa-code"></i>
+                            <h3 data-i18n="skill_prog">Programmation</h3>
+                        </div>
+                        <div class="skills-row__tags">
+                            <span>Python</span><span>C/C++</span><span>Java</span><span>PHP</span><span>VB.net</span><span>HTML / CSS / JS</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-row">
+                        <div class="skills-row__label">
+                            <i class="fas fa-database"></i>
+                            <h3 data-i18n="skill_db">Bases de Données & Big Data</h3>
+                        </div>
+                        <div class="skills-row__tags">
+                            <span>SQL</span><span>Oracle</span><span>PL/SQL</span><span>NoSQL</span><span>Hadoop</span><span>HDFS</span><span>Hive</span><span>Redis</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-row">
+                        <div class="skills-row__label">
+                            <i class="fas fa-server"></i>
+                            <h3 data-i18n="skill_devops">DevOps & Outils</h3>
+                        </div>
+                        <div class="skills-row__tags">
+                            <span>Git</span><span>GitHub</span><span>Docker</span><span>Linux</span><span>SonarQube</span><span>Proxmox</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-row">
+                        <div class="skills-row__label">
+                            <i class="fas fa-chart-line"></i>
+                            <h3 data-i18n="skill_bi">Business Intelligence</h3>
+                        </div>
+                        <div class="skills-row__tags">
+                            <span>Talend</span><span>Pentaho</span><span>PowerBI</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience section-padding fade-in">
+            <div class="container">
+                <h2 class="section-title" data-i18n="exp_work">Expériences Professionnelles</h2>
+                
+                <div class="experience-grid">
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <img src="https://cliniqueavicenne.ma/assets/logo.png" alt="Clinique Avicenne" class="company-logo">
+                            <div class="exp-date">05/2024 – 06/2024</div>
+                        </div>
+                        <h4 data-i18n="exp_helpdesk">Stagiaire Développeur Help Desk</h4>
+                        <h5>Clinique Avicenne, Casablanca</h5>
+                        <div data-i18n="exp_helpdesk_desc">Développement full-stack d’une application web de gestion des tickets d’assistance informatique. Diagnostic et résolution de pannes matérielles/logicielles, configuration de systèmes.</div>
+                    </div>
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/OCP_Group.svg/330px-OCP_Group.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20210417125646" alt="OCP" class="company-logo">
+                            <div class="exp-date">08/2023 – 09/2023</div>
+                        </div>
+                        <h4 data-i18n="exp_front">Stagiaire Développeur Front-end</h4>
+                        <h5>OCP, Jorf Lasfar</h5>
+                        <div data-i18n="exp_front_desc">Développement Front-End d’une application de facturation (HTML/CSS/JS). Intégration d’un module de saisie dynamique avec génération et export automatique de PDF.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section-padding fade-in">
+            <div class="container">
+                <h2 class="section-title" data-i18n="proj_title">Projets Réalisés</h2>
+                <div class="projects-list">
+
+                    <!-- Project 1: Self-Driving Car -->
+                    <div class="project-row">
+                        <div class="project-row__info">
+                            <h3 data-i18n="proj_car">Voiture Autonome</h3>
+                            <p data-i18n="proj_car_desc">Jeu de course 3D (Ursina/Python) avec mode manuel et mode autonome IA. Entraînement d'un MLP (PyTorch) par apprentissage supervisé pour prévoir les actions en temps réel.</p>
+                            <div class="project-tags">
+                                <span>Deep Learning</span><span>PyTorch</span><span>PyQt6</span>
+                            </div>
+                            <a href="https://github.com/Anam-Ayoub/SIIA_DeepLearning_Self_Drive_Car_Project" target="_blank" class="project-link" data-i18n="btn_github">Voir sur GitHub <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="project-row__preview">
+                            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7362097999193202688?compact=true" frameborder="0" allowfullscreen="" title="Post intégré"></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Footprint Classification -->
+                    <div class="project-row">
+                        <div class="project-row__info">
+                            <h3 data-i18n="proj_foot">Classification d'empreintes</h3>
+                            <p data-i18n="proj_foot_desc">Classification d'empreintes animales et de dinosaures. Implémentation d'un CNN custom et Transfer Learning avec MobileNetV2 en TensorFlow/Keras.</p>
+                            <div class="project-tags">
+                                <span>Computer Vision</span><span>CNN</span><span>TensorFlow</span>
+                            </div>
+                            <a href="https://github.com/Anam-Ayoub/SIIA_DeepLearning_Animal_Footprint_Classification" target="_blank" class="project-link" data-i18n="btn_github">Voir sur GitHub <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="project-row__preview project-row__preview--placeholder">
+                            <i class="fas fa-paw"></i>
+                            <span>Computer Vision</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: OraAdmin -->
+                    <div class="project-row">
+                        <div class="project-row__info">
+                            <h3 data-i18n="proj_ora">OraAdmin Tracking System</h3>
+                            <p data-i18n="proj_ora_desc">Plateforme multi-portails pour la gestion de projets. Base Oracle avec triggers/procédures PL/SQL et interface Streamlit avec suivi en temps réel.</p>
+                            <div class="project-tags">
+                                <span>Oracle PL/SQL</span><span>Streamlit</span><span>Python</span>
+                            </div>
+                            <a href="https://github.com/Anam-Ayoub/SIIA_OraAdmin_Tracking_System_Project" target="_blank" class="project-link" data-i18n="btn_github">Voir sur GitHub <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="project-row__preview project-row__preview--placeholder">
+                            <i class="fas fa-database"></i>
+                            <span>Oracle & Streamlit</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding fade-in">
+            <div class="container">
+                <h2 class="section-title" data-i18n="contact_title">Contactez-moi</h2>
+                
+                <div class="contact-grid">
+                    <div class="contact-left">
+                        <p class="contact-text" data-i18n="contact_desc">Je suis à la recherche d'un stage PFE à partir de février 2027. N'hésitez pas à me contacter !</p>
+                        <a href="mailto:ayoub.anam2004@outlook.com" class="btn btn-primary contact-cta"><i class="fas fa-paper-plane"></i> <span data-i18n="contact_cta">Envoyer un message</span></a>
+                        <div class="contact-socials">
+                            <a href="https://github.com/Anam-Ayoub/" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com/in/ayoub-anam/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4 data-i18n="contact_email">Email</h4>
+                                <a href="mailto:ayoub.anam2004@outlook.com">ayoub.anam2004@outlook.com</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4 data-i18n="contact_phone">Téléphone</h4>
+                                <span>+212 690935142</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4 data-i18n="contact_location">Localisation</h4>
+                                <span>Berrechid, Maroc</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="#home" data-i18n="nav_home">Accueil</a>
+            <a href="#about" data-i18n="nav_about">À propos</a>
+            <a href="#skills" data-i18n="nav_skills">Compétences</a>
+            <a href="#projects" data-i18n="nav_projects">Projets</a>
+        </div>
+        <p>&copy; 2026 Ayoub ANAM. <span data-i18n="footer_rights">Tous droits réservés.</span></p>
+    </footer>
+
+    <!-- CV Modal -->
+    <div id="cv-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal"><i class="fas fa-times"></i></span>
+            <iframe src="CV.pdf" title="CV Ayoub ANAM"></iframe>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
