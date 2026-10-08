@@ -12,7 +12,7 @@
       - Card Background (White): #ffffff
       
    2. TYPOGRAPHY:
-      - Headings & Logo: 'GTA Art Deco' (Loaded locally from /Fonts/)
+      - Headings & Logo: 'Oswald' (sans-serif, loaded via Google Fonts)
       - Body Text: 'Inter' (sans-serif, loaded via Google Fonts)
       
    3. LAYOUT & RESPONSIVENESS:
@@ -26,19 +26,7 @@
 ========================================================================== */
 
 /* --- Custom Fonts --- */
-@font-face {
-    font-family: 'GTA Art Deco';
-    src: url('Fonts/GTA-Art-Deco-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
 
-@font-face {
-    font-family: 'GTA Art Deco';
-    src: url('Fonts/GTA-Art-Deco-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
 
 @font-face {
     font-family: 'Chinese Rocks';
@@ -57,7 +45,7 @@
     --card-bg: #ffffff; 
     
     --font-main: 'Inter', sans-serif;
-    --font-heading: 'GTA Art Deco', sans-serif;
+    --font-heading: 'Oswald', sans-serif;
     --transition: all 0.3s ease;
 }
 
@@ -81,6 +69,7 @@ body {
 
 h1, h2, h3, h4, h5 {
     font-family: var(--font-heading);
+    font-weight: 600;
 }
 
 .container {
@@ -493,7 +482,7 @@ nav {
 
 .skills-row__label h3 {
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--text-main);
     letter-spacing: 0.3px;
     font-family: var(--font-main);
