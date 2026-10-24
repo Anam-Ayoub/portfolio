@@ -46,10 +46,12 @@ const translations = {
         footer_rights: "Tous droits réservés.",
         skill_ia: "IA & ML",
         skill_ds: "Data Science",
-        skill_prog: "Programmation",
+        skill_bi: "Business Intelligence",
+        skill_dev: "Développement & Web",
+        skill_prog: "Développement & Web",
         skill_db: "Bases de Données & Big Data",
         skill_devops: "DevOps & Outils",
-        skill_bi: "Business Intelligence"
+        skill_testing: "Testing"
     },
     en: {
         nav_home: "Home",
@@ -98,10 +100,12 @@ const translations = {
         footer_rights: "All Rights Reserved.",
         skill_ia: "AI & ML",
         skill_ds: "Data Science",
-        skill_prog: "Programming",
+        skill_bi: "Business Intelligence",
+        skill_dev: "Development & Web",
+        skill_prog: "Development & Web",
         skill_db: "Databases & Big Data",
         skill_devops: "DevOps & Tools",
-        skill_bi: "Business Intelligence"
+        skill_testing: "Testing"
     }
 };
 

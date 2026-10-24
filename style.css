@@ -437,76 +437,98 @@ nav {
 .skills-table {
     display: flex;
     flex-direction: column;
-    border-top: 1px solid rgba(59, 59, 59, 0.12);
 }
 
 .skills-row {
     display: flex;
     align-items: flex-start;
-    padding: 28px 0;
-    border-bottom: 1px solid rgba(59, 59, 59, 0.12);
+    padding: 20px 16px;
     gap: 40px;
-    transition: background 0.2s ease;
+    border-bottom: 1px solid rgba(59, 59, 59, 0.08);
+    border-radius: 10px;
+    transition: background 0.25s ease;
+}
+
+.skills-row:first-child {
+    border-top: 1px solid rgba(59, 59, 59, 0.08);
 }
 
 .skills-row:hover {
-    background: rgba(59, 59, 59, 0.02);
-    padding-left: 12px;
-    padding-right: 12px;
-    margin: 0 -12px;
-    border-radius: 8px;
+    background: rgba(59, 59, 59, 0.03);
 }
 
 .skills-row__label {
     display: flex;
     align-items: center;
     gap: 14px;
-    min-width: 240px;
+    min-width: 210px;
     flex-shrink: 0;
+    /* Vertically center the label with the first row of tags.
+       Tag pill height = ~26px. Icon box = 34px.
+       Offset = (34 - 26) / 2 = 4px → shift label down by 4px so
+       the icon center lines up with the first tag row center. */
+    align-self: flex-start;
+    margin-top: 4px;
 }
 
+/* Icon box */
 .skills-row__label i {
-    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    background: rgba(59, 59, 59, 0.07);
+    border-radius: 8px;
+    font-size: 0.85rem;
     color: var(--accent-color);
-    width: 24px;
-    text-align: center;
-    opacity: 0.7;
+    transition: background 0.25s ease;
+}
+
+.skills-row:hover .skills-row__label i {
+    background: rgba(59, 59, 59, 0.13);
 }
 
 .skills-row__label h3 {
-    font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-main);
-    letter-spacing: 0.3px;
     font-family: var(--font-main);
     text-transform: uppercase;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     letter-spacing: 1px;
+    line-height: 1.4;
 }
 
 .skills-row__tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
+    gap: 8px;
+    align-items: flex-start;
     flex: 1;
+    /* Push first tag down to align with icon/text center:
+       (34px icon - 26px pill) / 2 = 4px */
+    padding-top: 4px;
 }
 
 .skills-row__tags span {
+    display: inline-block;
     background-color: var(--bg-color);
     color: var(--text-light);
-    padding: 6px 14px;
+    padding: 5px 14px;
     border-radius: 20px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 500;
-    border: 1px solid rgba(59, 59, 59, 0.1);
-    transition: var(--transition);
+    border: 1px solid rgba(59, 59, 59, 0.15);
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    cursor: default;
 }
 
 .skills-row__tags span:hover {
     background-color: var(--accent-color);
     color: #fff;
     border-color: var(--accent-color);
+    transform: translateY(-1px);
 }
 
 /* --- Education Section --- */
@@ -991,6 +1013,33 @@ footer {
     
     .section-title::after {
         margin: 15px auto 0;
+    }
+
+    /* Skills: stack label above tags on mobile */
+    .skills-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 18px 12px;
+    }
+
+    .skills-row__label {
+        min-width: unset;
+    }
+
+    .skills-row__label i {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+
+    .skills-row__tags {
+        gap: 7px;
+    }
+
+    .skills-row__tags span {
+        font-size: 0.8rem;
+        padding: 4px 12px;
     }
 
     .hero {
