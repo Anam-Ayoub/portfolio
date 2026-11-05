@@ -437,38 +437,36 @@ nav {
 .skills-table {
     display: flex;
     flex-direction: column;
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(59, 59, 59, 0.08);
+    overflow: hidden;
 }
 
 .skills-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: 270px 1fr;
     align-items: flex-start;
-    padding: 20px 16px;
-    gap: 40px;
-    border-bottom: 1px solid rgba(59, 59, 59, 0.08);
-    border-radius: 10px;
-    transition: background 0.25s ease;
+    padding: 22px 28px;
+    gap: 32px;
+    border-bottom: 1px solid rgba(59, 59, 59, 0.06);
+    transition: background-color 0.25s ease;
 }
 
-.skills-row:first-child {
-    border-top: 1px solid rgba(59, 59, 59, 0.08);
+.skills-row:last-child {
+    border-bottom: none;
 }
 
 .skills-row:hover {
-    background: rgba(59, 59, 59, 0.03);
+    background: rgba(59, 59, 59, 0.02);
 }
 
 .skills-row__label {
     display: flex;
     align-items: center;
     gap: 14px;
-    min-width: 210px;
-    flex-shrink: 0;
-    /* Vertically center the label with the first row of tags.
-       Tag pill height = ~26px. Icon box = 34px.
-       Offset = (34 - 26) / 2 = 4px → shift label down by 4px so
-       the icon center lines up with the first tag row center. */
-    align-self: flex-start;
-    margin-top: 4px;
+    margin-top: 2px;
 }
 
 /* Icon box */
@@ -476,18 +474,20 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 34px;
-    height: 34px;
+    width: 38px;
+    height: 38px;
     flex-shrink: 0;
-    background: rgba(59, 59, 59, 0.07);
-    border-radius: 8px;
-    font-size: 0.85rem;
+    background: rgba(59, 59, 59, 0.06);
+    border-radius: 10px;
+    font-size: 0.95rem;
     color: var(--accent-color);
-    transition: background 0.25s ease;
+    transition: all 0.25s ease;
 }
 
 .skills-row:hover .skills-row__label i {
-    background: rgba(59, 59, 59, 0.13);
+    background: var(--accent-color);
+    color: #ffffff;
+    transform: scale(1.05);
 }
 
 .skills-row__label h3 {
@@ -495,8 +495,8 @@ nav {
     color: var(--text-main);
     font-family: var(--font-main);
     text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
+    font-size: 0.82rem;
+    letter-spacing: 0.8px;
     line-height: 1.4;
 }
 
@@ -506,21 +506,18 @@ nav {
     gap: 8px;
     align-items: flex-start;
     flex: 1;
-    /* Push first tag down to align with icon/text center:
-       (34px icon - 26px pill) / 2 = 4px */
-    padding-top: 4px;
 }
 
 .skills-row__tags span {
     display: inline-block;
     background-color: var(--bg-color);
-    color: var(--text-light);
-    padding: 5px 14px;
+    color: var(--text-main);
+    padding: 6px 14px;
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 500;
-    border: 1px solid rgba(59, 59, 59, 0.15);
-    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    border: 1px solid rgba(59, 59, 59, 0.12);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: default;
 }
 
@@ -528,7 +525,8 @@ nav {
     background-color: var(--accent-color);
     color: #fff;
     border-color: var(--accent-color);
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
 /* --- Education Section --- */
@@ -999,6 +997,12 @@ footer {
     .hero-content h1 {
         font-size: 3rem;
     }
+
+    .skills-row {
+        grid-template-columns: 240px 1fr;
+        gap: 20px;
+        padding: 18px 20px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -1016,21 +1020,26 @@ footer {
     }
 
     /* Skills: stack label above tags on mobile */
+    .skills-table {
+        border-radius: 12px;
+    }
+
     .skills-row {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         align-items: flex-start;
         gap: 14px;
-        padding: 18px 12px;
+        padding: 18px 16px;
     }
 
     .skills-row__label {
         min-width: unset;
+        margin-top: 0;
     }
 
     .skills-row__label i {
-        width: 30px;
-        height: 30px;
-        font-size: 0.8rem;
+        width: 32px;
+        height: 32px;
+        font-size: 0.85rem;
     }
 
     .skills-row__tags {
@@ -1039,7 +1048,7 @@ footer {
 
     .skills-row__tags span {
         font-size: 0.8rem;
-        padding: 4px 12px;
+        padding: 5px 12px;
     }
 
     .hero {
