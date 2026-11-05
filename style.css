@@ -529,6 +529,42 @@ nav {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
+/* Certified Skill Badges in Skills Section */
+.skills-row__tags a.skill-tag--certified {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(59, 59, 59, 0.12);
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+}
+
+.skills-row__tags a.skill-tag--certified i {
+    font-size: 0.75rem;
+    color: #c98a2c; /* Warm gold certificate badge */
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.skills-row__tags a.skill-tag--certified:hover {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.skills-row__tags a.skill-tag--certified:hover i {
+    color: #ffd166; /* Bright gold on hover */
+    transform: scale(1.15);
+}
+
 /* --- Education Section --- */
 .education-grid {
     display: grid;
@@ -589,6 +625,214 @@ nav {
     border-radius: 20px;
     font-size: 0.9rem;
     margin: 0 auto;
+}
+
+/* --- Certifications Section --- */
+.certifications-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.cert-card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(59, 59, 59, 0.08);
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.cert-card__preview {
+    position: relative;
+    background: #e9e5d9;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+}
+
+.cert-card__preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.cert-card:hover .cert-card__preview img {
+    transform: scale(1.03);
+}
+
+.cert-card__preview-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(44, 41, 37, 0.65);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    opacity: 0;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(2px);
+}
+
+.cert-card:hover .cert-card__preview-overlay {
+    opacity: 1;
+}
+
+.cert-card__preview-overlay i {
+    font-size: 1.6rem;
+}
+
+.cert-card__preview-overlay span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.cert-card__content {
+    padding: 32px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cert-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.cert-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(46, 125, 50, 0.1);
+    color: #2e7d32;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.cert-date {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.cert-title {
+    font-size: 1.5rem;
+    color: var(--text-main);
+    font-family: var(--font-heading);
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.cert-issuer {
+    font-size: 0.95rem;
+    color: #b85135;
+    font-weight: 600;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cert-desc {
+    color: var(--text-light);
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 20px;
+}
+
+.cert-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.cert-id-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(59, 59, 59, 0.05);
+    border: 1px dashed rgba(59, 59, 59, 0.2);
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-family: monospace;
+}
+
+.cert-id-label {
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.cert-id-code {
+    color: var(--text-main);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.cert-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.cert-tags span {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(59, 59, 59, 0.1);
+}
+
+.cert-verify-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    align-self: flex-start;
+    transition: all 0.25s ease;
+}
+
+.cert-verify-btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    gap: 14px;
 }
 
 /* --- Experience Section --- */
@@ -1049,6 +1293,29 @@ footer {
     .skills-row__tags span {
         font-size: 0.8rem;
         padding: 5px 12px;
+    }
+
+    .skills-row__tags a.skill-tag--certified {
+        font-size: 0.8rem;
+        padding: 5px 12px;
+    }
+
+    /* Certifications on mobile */
+    .cert-card {
+        grid-template-columns: 1fr;
+    }
+
+    .cert-card__preview {
+        min-height: 200px;
+        max-height: 250px;
+    }
+
+    .cert-card__content {
+        padding: 24px 20px;
+    }
+
+    .cert-title {
+        font-size: 1.3rem;
     }
 
     .hero {

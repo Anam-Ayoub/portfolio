@@ -3,6 +3,7 @@ const translations = {
         nav_home: "Accueil",
         nav_about: "À propos",
         nav_education: "Formations",
+        nav_certifications: "Certifications",
         nav_skills: "Compétences",
         nav_experience: "Expérience",
         nav_projects: "Projets",
@@ -51,12 +52,19 @@ const translations = {
         skill_prog: "Développement & Web",
         skill_db: "Bases de Données & Big Data",
         skill_devops: "DevOps & Outils",
-        skill_testing: "Testing"
+        skill_testing: "Testing",
+        cert_title: "Certifications",
+        cert_verified: "Vérifié",
+        cert_view_official: "Voir l'original",
+        cert_git_desc: "Maîtrise approfondie du versioning avec Git et de la collaboration sur GitHub : branches, pull requests, résolution de conflits et workflows d'équipe.",
+        cert_id_label: "ID :",
+        cert_verify_cta: "Vérifier l'authenticité"
     },
     en: {
         nav_home: "Home",
         nav_about: "About",
         nav_education: "Education",
+        nav_certifications: "Certifications",
         nav_skills: "Skills",
         nav_experience: "Experience",
         nav_projects: "Projects",
@@ -105,7 +113,13 @@ const translations = {
         skill_prog: "Development & Web",
         skill_db: "Databases & Big Data",
         skill_devops: "DevOps & Tools",
-        skill_testing: "Testing"
+        skill_testing: "Testing",
+        cert_title: "Certifications",
+        cert_verified: "Verified",
+        cert_view_official: "View Original",
+        cert_git_desc: "Comprehensive mastery of version control with Git and team collaboration on GitHub: branches, pull requests, conflict resolution, and collaborative workflows.",
+        cert_id_label: "ID:",
+        cert_verify_cta: "Verify Credential"
     }
 };
 
